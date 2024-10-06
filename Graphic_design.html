@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design Portfolio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-image: url(BG\ Image.png);
+        }
+        .portfolio-section {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            margin-right: 138px;
+        }
+        .portfolio-container {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            overflow: hidden;
+            align-items: center;
+            padding: 28px 49px 94px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font: 13px 'Inter', sans-serif;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 1530px;
+            height: 82.51px;
+            margin-top: -28px;
+        }
+        .logo {
+            height: auto;
+            width: 53px;
+            margin-left: 150px;
+        }
+        .nav {
+            display: flex;
+            gap: 33px 50px;
+            margin: auto 0;
+            margin-right: 100px;
+            
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .nav-link {
+            color: #8e95a2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover, .nav-link:focus {
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .nav-link-active {
+            color: #fff;
+            font-weight: 700;
+        }
+        .nav-link-email {
+            background-color: #fff;
+            color: #050611;
+            margin-top: 10px;
+            padding: 5px 30px;
+            height: 15px;
+            width: 35px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
+        }
+        .nav-link-email:hover, .nav-link-email:focus {
+            background-color: #050611;
+            color: #fff;
+        }
+        .hero-title {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border-radius: 16px;
+            min-height: 212px;
+            margin-top: 132px;
+            width: 100%;
+            max-width: 1920px;
+            color: #fff;
+            text-align: center;
+            padding: 35px 70px;
+            font-size: 119px;
+            font-family: 'Lucida Grande', sans-serif;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .hero-text {
+            position: relative;
+        }
+        .portfolio-grid {
+            margin-top: 65px;
+            width: 100%;
+            max-width: 1920px;
+        }
+        .grid-row {
+            gap: 20px;
+            display: flex;
+        }
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 25%;
+        }
+        .portfolio-image {
+            aspect-ratio: 1;
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            max-width: 399px;
+        }
+        .portfolio-grid-2 {
+            margin-top: 48px;
+            width: 100%;
+            max-width: 1920px;
+        }
+        .divider {
+            margin-top: 106px;
+            width: 100%;
+            max-width: 1920px;
+            height: 1px;
+            border: none;
+            background-color: #fff;
+        }
+        .large-image-grid {
+            margin-top: 86px;
+            width: 100%;
+            max-width: 1920px;
+        }
+        .large-image-row {
+            gap: 20px;
+            display: flex;
+        }
+        .large-image-item {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 50%;
+        }
+        .large-portfolio-image {
+            aspect-ratio: 1.78;
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+        }
+        .footer-wrapper {
+            display: flex;
+            margin-top: 93px;
+            width: 100%;
+            max-width: 1920px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .footer-info {
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+        .footer-name {
+            color: #fff;
+            text-align: center;
+            font: 600 25px 'Poppins', sans-serif;
+            margin: 0;
+        }
+        .footer-title {
+            color: #979797;
+            text-align: center;
+            align-self: stretch;
+            font: 500 30px 'Poppins', sans-serif;
+            margin: 10px 0;
+        }
+        .social-links {
+            display: flex;
+            margin-top: 19px;
+            width: 179px;
+            max-width: 100%;
+            gap: 10px;
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding: 7px;
+            transition: background-color 0.3s ease;
+        }
+        .social-link:hover, .social-link:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .social-icon {
+            object-fit: contain;
+            object-position: center;
+            width: 39px;
+        }
+        .cta-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        .cta-text {
+            color: #fff;
+            font: 400 44px 'Lancelot', sans-serif;
+            margin: 0;
+        }
+        .cta-button {
+            align-self: start;
+            background-color: #fff;
+            margin-top: 40px;
+            color: #050611;
+            letter-spacing: -0.4px;
+            padding: 15px 47px;
+            font: 500 23px 'Inter', sans-serif;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .cta-button:hover, .cta-button:focus {
+            background-color: #050611;
+            color: #fff;
+        }
+        @media (max-width: 1920px) {
+            .portfolio-container {
+                padding: 28px 5% 94px;
+            }
+            .header-wrapper, .hero-title, .portfolio-grid, .portfolio-grid-2, .large-image-grid, .footer-wrapper {
+                max-width: 90%;
+            }
+        }
+        @media (max-width: 991px) {
+            .portfolio-container {
+                padding: 20px 5%;
+            }
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav {
+                margin-top: 20px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero-title {
+                font-size: 60px;
+                padding: 35px 20px;
+                margin-top: 60px;
+            }
+            .grid-row, .large-image-row {
+                flex-direction: column;
+            }
+            .grid-item, .large-image-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .portfolio-image, .large-portfolio-image {
+                max-width: 100%;
+            }
+            .footer-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-info, .cta-wrapper {
+                text-align: center;
+                align-items: center;
+            }
+            .cta-text {
+                font-size: 40px;
+            }
+            .cta-button {
+                font-size: 24px;
+                padding: 10px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="portfolio-section">
+        <div class="portfolio-container">
+            <header class="header">
+                <img src="Group 1010107354.png" alt="Portfolio Logo" class="logo">
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="Untitled-1.html" class="nav-link">Home</a></li>
+                        <li><a href="About.html" class="nav-link nav-link-active">About</a></li>
+                        <li><a href="Resume Aniket Bhuse.pdf" class="nav-link">Resume</a></li>
+                    </ul>
+                    <a href="mailto: aniketbhusee@gmail.com" class="nav-link-email">Email</a>
+                </nav>
+            </header>
+            <h1 class="hero-title">
+                <span class="hero-text">Graphic Design</span>
+            </h1>
+            <div class="portfolio-grid">
+                <div class="grid-row">
+                    <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ea1f093cac7401dc54510edede3208ff16709e4a854b25429fe1fa0bb05cddc8?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Portfolio item 1" class="portfolio-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ee205ebff8b970fdeea0c118f26d96bfb35f5e4435c1cdada450c457007f108d?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Portfolio item 2" class="portfolio-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1082b2adc9d4e67c738181d8e1362f50ed12ebe40e1bdad5f568df843388c97?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Portfolio item 3" class="portfolio-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/72ab40e090feddeed3866c6d69e093a3f69e205107d9a7c7ddfebe98d972f90b?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Portfolio item 4" class="portfolio-image">
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-grid-2">
+                <div class="grid-row">
+                    <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4153ce2ffd99353634032bf5dc300704fe2f8899322795853fbf878ade50c692?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Portfolio item 5" class="portfolio-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0fd10fa9842edb1a775cda011f220489ea73a47ea4f44489a7135a92dd7ef3d8?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Portfolio item 6" class="portfolio-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b0ab7766754bafb50917ebfe3a13d9b6d8972d795d8ee87a1c8e0f4782c96160?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Portfolio item 7" class="portfolio-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbd9c8bba0ec6adfa4c69a504ade27fa1914386d4c2b42fee1b13d76aa03fc88?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Portfolio item 8" class="portfolio-image">
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="large-image-grid">
+                <div class="large-image-row">
+                    <div class="large-image-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/61299c22f68bc4eef756b0ba9fb5f40005462514a388dfbd43892b6f6ec1a1e8?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Large portfolio item 1" class="large-portfolio-image">
+                    </div>
+                    <div class="large-image-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a0ac8ccf3d70f4692e884b5f9c828003a5900524bc4e6940e1e08b92a2cb4bd?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Large portfolio item 2" class="large-portfolio-image">
+                    </div>
+                </div>
+            </div>
+            <div class="large-image-grid">
+                <div class="large-image-row">
+                    <div class="large-image-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9dd8c418f044841f4871ca9c7e8f5d94dd41233a99b3ae9284879ffe3f3f4832?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Large portfolio item 3" class="large-portfolio-image">
+                    </div>
+                    <div class="large-image-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4905dddb2d3e597f9071e794aa99df3804b57f6772d5468f4f21b41a785e39b6?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Large portfolio item 4" class="large-portfolio-image">
+                    </div>
+                </div>
+            </div>
+            <div class="large-image-grid">
+                <div class="large-image-row">
+                    <div class="large-image-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8749ce99afe7b69ba3accbf64a12a44b175c6c0f741ae15756c51a434f495b3d?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Large portfolio item 5" class="large-portfolio-image">
+                    </div>
+                    <div class="large-image-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/98f7a34827af4f1ec201980abcadc26d949d7b031ac64b848290e8dc28767b55?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Large portfolio item 6" class="large-portfolio-image">
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+            <footer class="footer-wrapper">
+                <div class="footer-info">
+                    <h2 class="footer-name">Aniket Bhuse</h2>
+                    <p class="footer-title">UI/UX Designer | Graphic Designer</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/aniket-bhuse-716991225/" class="social-link">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1b0404231e83b7d4656b9584d8fea853c657501dde28fad4a002458b1516475?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Social media icon" class="social-icon">
+                        </a>
+                        <a href="https://www.instagram.com/illustrationbyaniket/" class="social-link">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/73e20910bc1b8a4b31bb3353bdc8a247dade947fdc3524475363a30d8cf4555d?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Social media icon" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/72b0671ded2ec62f39aa8b60b39efeb27b18d6a3e9185003d3206b9c0cfc62df?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="Social media icon" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-wrapper">
+                    <p class="cta-text">If you like what you see, let's <br><span style="background-color: #4A4D30;">work together</span></p>
+                    <a href="mailto: aniketbhusee@gmail.com" class="cta-button">Email me</a>
+                </div>
+            </footer>
+        </div>
+    </section>
+</body>
+</html>

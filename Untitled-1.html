@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Aniket Bhuse - UI/UX Designer | Graphic Designer</title>
+    <style>
+body { background: #2d2d37;}
+a { color: white; text-decoration: none; }
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins, sans-serif;
+            background-color: #000;
+            color: #fff;
+            background-image: url(BG\ Image.png);
+        }
+        .portfolio-section {
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 65px;
+            z-index: 1000;
+        }
+        .hero {
+            padding: 17px 0 0;
+            position: relative;
+        }
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font: 13px Inter, sans-serif;
+        }
+        .logo {
+            width: 53px;
+            height: auto;
+        }
+        .nav {
+            display: flex;
+            gap: 33px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .nav-link {
+            color: #8e95a2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover, .nav-link:focus {
+            color: #fff;
+        }
+        .active-link {
+            color: #fff;
+            font-weight: 700;
+        }
+        .cta-button {
+            background-color: #fff;
+            color: #050611;
+            margin-top: 10px;
+            padding: 5px 30px;
+            height: 15px;
+            width: 35px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
+        }
+    
+        .cta-button:hover, .cta-button:focus {
+            background-color: #050611;
+            color: #fff;
+        }
+        .designer-name {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .job-title {
+            color: #979797;
+            font-size: 19px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .hero-description {
+            text-align: center;
+            margin-top: 41px;
+            font: 400 44px 'Lancelot', sans-serif;
+            max-width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .scroll-indicator {
+            width: 10px;
+            margin: 143px auto 0;
+            display: block;
+        }
+        .project-section {
+            margin-top: 119px;
+            text-align: center;
+        }
+        .project-title {
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .project-date {
+            color: #979797;
+            font-size: 19px;
+            margin-top: 5px;
+        }
+        .projects-grid {
+            max-width: 1200px;
+            margin: 54px auto 0;
+            padding: 3px 20px 66px;
+        }
+        .project-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 108px;
+        }
+        .project-card {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-image {
+            border-radius: 11px;
+            background-color: rgba(217, 217, 217, 0.21);
+            min-height: 400px;
+            width: 100%;
+        }
+        .project-info {
+            margin-top: 18px;
+        }
+        .project-name {
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .project-tags {
+            color: #979797;
+            font-size: 19px;
+            font-weight: 500;
+        }
+        .footer {
+            max-width: 1200px;
+            margin: 5px auto 0;
+            padding: 103px 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #fff;
+            margin-top: -20px;
+        }
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer-name {
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .footer-title {
+            color: #979797;
+            font-size: 19px;
+            font-weight: 500;
+            margin-top: -10px;
+        }
+        .social-links {
+            display: flex;
+            margin-top: 12px;
+            gap: 6px;
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        .social-link:hover, .social-link:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .social-icon {
+            width: 24px;
+            height: 24px;
+        }
+        .footer-cta {
+            max-width: 50%;
+            margin-top: -40px;
+        }
+        .cta-text {
+            font: 400 44px 'Lancelot', sans-serif;
+        }
+        .cta-button-large {
+            background-color: #fff;
+            color: #050611;
+            font: 500 23px Inter, sans-serif;
+            padding: 9px 30px;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: -20px;
+        }
+        .cta-button-large:hover, .cta-button-large:focus {
+            background-color: #050611;
+            color: #fff;
+        }
+        @media (max-width: 991px) {
+            .hero-content, .projects-grid, .footer {
+                padding: 0 20px;
+            }
+            .designer-name, .job-title, .hero-description, .scroll-indicator, .project-section {
+                margin-top: 40px;
+            }
+            .projects-grid {
+                margin-top: 40px;
+            }
+            .project-row {
+                flex-direction: column;
+            }
+            .project-card {
+                width: 100%;
+                margin-top: 16px;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .footer-info, .footer-cta {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+            .cta-button-large {
+                padding: 9px 20px;
+            }
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+.divider {
+  align-self: stretch;
+  height: 1px;
+  border: 1px #fff;
+  width: 85%;
+}
+
+.companies-section {
+  background-color: #000;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px 76px;
+  margin-top: -150px;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1650px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divider {
+  align-self: stretch;
+  height: 1px;
+  border: 1px solid #fff;
+}
+
+.section-title {
+  color: #fff;
+  margin-top: 54px;
+}
+
+.company-logos {
+  aspect-ratio: 6.06;
+  object-fit: contain;
+  object-position: center;
+  width: 885px;
+  margin-top: 55px;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .companies-section {
+    max-width: 100%;
+    font-size: 40px;
+    padding: 0 20px;
+  }
+
+  .content-wrapper {
+    max-width: 100%;
+    font-size: 40px;
+  }
+
+  .divider {
+    max-width: 100%;
+  }
+
+  .section-title {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 40px;
+  }
+
+  .company-logos {
+    margin-top: 40px;
+  }
+}
+    </style>
+</head>
+<body>
+    <main class="portfolio-section">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b43408b9d279a3f75bd269498150e552686efac31c7095dc2abb28e6652e130?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="" class="bg-image" aria-hidden="true">
+        <section class="hero">
+            <div class="hero-content">
+                <header class="header">
+                    <img src="Group 1010107354.png" alt="Portfolio Logo" class="logo">
+                    <nav class="nav">
+                        <ul class="nav-links">
+                            <li><a href="Untitled-1.html" class="nav-link">Home</a></li>
+                            <li><a href="About.html" class="nav-link">About</a></li>
+                            <li><a href="Resume Aniket Bhuse.pdf" class="nav-link">Resume</a></li>
+                        </ul>
+                        <a href="mailto: aniketbhusee@gmail.com" class="cta-button">Email</a>
+                    </nav>
+                </header>
+                <h1 class="designer-name">Aniket Bhuse</h1>
+                <p class="job-title">UI/UX Designer | Graphic Designer</p>
+                <p class="hero-description">I craft intuitive experiences by transforming insights into<br><span style="background-color: #4A4D30;">user-centric designs</span> that tell <span style="background-color: #4A4D30;">compelling stories.</span></p>
+                <div class="arrow bounce">
+                    <a class="fa fa-arrow-down fa-2x" href="#"></a>
+                </div>
+                <div class="project-section">
+                    <h2 class="project-title">Selected Project</h2>
+                    <p class="project-date">2022 - 2024</p>
+                </div>
+            </div>
+        </section>
+        <section class="projects-grid">
+            <div class="project-row">
+                <article class="project-card">
+                    <a href="Project-1.html" ><img src="Slide 16_9 - 387.png" alt="Service Design Project Preview" class="project-image"></a>
+                    <div class="project-info">
+                        <h3 class="project-name">UI Design</h3>
+                        <p class="project-tags">UX research | Design Thinking | UI design</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a href="Project-2.html"><img src="Slide 16_9 - 404.png" alt="Service Design Project Preview" class="project-image"></a>
+                    <div class="project-info">
+                        <h3 class="project-name">Service Design</h3>
+                        <p class="project-tags">UX research | Design Thinking | UI design</p>
+                    </div>
+                </article>
+            </div>
+            <div class="project-row">
+                <article class="project-card">
+                    <img src="WhatsApp Image 2024-10-05 at 14.12.30_87a5dc37.jpg" alt="Service Design Project Preview" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-name">CASE STUDY 3</h3>
+                        <p class="project-tags">UX research | Design Thinking | UI design</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a href="Graphic_design.html"><img src="Group 1000004218.png" alt="Service Design Project Preview" class="project-image"></a>
+                    <div class="project-info">
+                        <h3 class="project-name">Graphic Design</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="companies-section">
+            <hr class="divider">
+            <div class="content-wrapper">        
+              <h2 class="section-title">Companies I've Worked With</h2>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c24a6fd53ac5f70e7471f45789840bc88d88f89547b5d7a86bd9d54b34a4eec?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" class="company-logos" alt="Logos of companies I've worked with" loading="lazy">
+            </div>
+          </section>
+        <footer class="footer">
+            <div class="footer-info">
+                <h2 class="footer-name">Aniket Bhuse</h2>
+                <p class="footer-title">UI/UX Designer | Graphic Designer</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/aniket-bhuse-716991225/" class="social-link" aria-label="LinkedIn Profile">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2352d7b30b1aa10210a10f82069bce2f32424c53a2de90e1867825c1e490628?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/illustrationbyaniket/" class="social-link" aria-label="Twitter Profile">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/213d1e81cf691fa05174c111f99b837b93c127f3e1fff8de4cfd72b8f03daa51?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram Profile">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/58f8fe4fe0abeff7305dfd69dbabb72e77e08247ca2ca8de78ad9fe46270b737?placeholderIfAbsent=true&apiKey=65ddaad267764ada81bf38231524b707" alt="" class="social-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-cta">
+                <p class="cta-text">If you like what you see, let's<br><span; style="background-color: #4A4D30;">work together</span></p>
+                <a href="mailto: aniketbhusee@gmail.com" class="cta-button-large">Email me</a>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
